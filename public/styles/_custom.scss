@@ -1,0 +1,67 @@
+/* Definimos las Custom properties */
+:root {
+  /* Colores */
+  --c--black: #171A20;
+  --c--banner: #393C41;
+  --c--shadow: 0 0 0.0625rem #d0d1d2;
+  --c--footer: #5c5E62;
+  --white: #fff;
+  --button: #171A20CC;
+  --button-two: #e8e8e7;
+  --fade-in: fade-in 3s ease;
+  --fade-out: fade-out 5s ease;
+  --pulsing: pulsing 1.5s infinite ease-in-out;
+
+  /* Tipografía */
+  --tip-principal: Raleway, Open Sans, sans-serif;
+  --tipo-secondary: Verdana;
+}
+
+
+@keyframes fade-in {
+  0% {
+      opacity: 0
+  }
+
+  to {
+      opacity: 1
+  }
+}
+
+
+@keyframes pulsing {
+  0% {
+      opacity: 0
+  }
+
+  20% {
+      opacity: .7
+  }
+
+  to {
+      opacity: 0
+  }
+}
+
+@keyframes fade-out {
+  0% {
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,77 @@
+@import "/public/styles/mixins";
+
+.Product {
+  width: 100%;
+  text-align: center;
+
+  &-info {
+    width: 100%;
+    height: 100%;
+    @include flex(column, nowrap, space-between, center);
+    position: absolute;
+    padding: 9vh 0;
+  }
+
+  &-scroll {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    @include flex(column, nowrap, flex-start, stretch);
+    overflow: auto;
+    scroll-snap-type: y mandatory;    
+  }
+  &-img {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    scroll-snap-align: center;
+  }
+
+  &-section {
+    margin: 5rem 0 0;
+    line-height: 2.5em;
+    font-weight: 600;
+    color: var(--c--black);
+    letter-spacing: 0.0625rem;
+    animation: var(--fade-in); 
+  }
+  
+  &-h2 {
+    font-size: 2.5rem;
+  }
+
+  &-span {
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+
+  &-ul {
+    @include flex(row, wrap, center, center);
+    gap: 1.5625rem;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    padding: 0 1em;
+    animation: var(--fade-in);
+
+  }
+  &-li {
+    background-color: var(--button);
+    color: var(--white);
+    border-radius: 0.3125rem;
+    padding: 0.73em 5.5em;
+
+    &:nth-of-type(2) {
+      background-color: var(--button-two);
+      color: var(--c--black);
+      padding: 0.73em 6em;
+    }
+
+    @include media() {
+      width: 100%;
+    }
+  }
+
+  .disabled {
+    display: none;
+  }
+
+}
